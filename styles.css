@@ -1,0 +1,231 @@
+/* General Reset */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+  
+}
+
+/* Navigation Bar */
+nav {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    padding: 1rem 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.main_nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.main_nav a {
+    text-decoration: none;
+}
+
+.main_nav a label {
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 2.5rem;
+    color: #f4f4f9;
+    transition: color 0.3s ease;
+}
+
+.main_nav a label:hover {
+    color: #ffdd57; /* Add a hover effect for the logo text */
+}
+
+.link ul {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+.link ul li {
+    position: relative;
+}
+
+.link ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    border-radius: 5px;
+    font-size: large;
+}
+
+.link ul li a:hover {
+    color: #6a11cb;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.link ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: white;
+    bottom: -5px;
+    left: 0;
+    transition: width 0.3s ease;
+}
+
+.link ul li a:hover::after {
+    width: 100%;
+}
+
+/* Search Bar */
+#searchForm {
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0;
+}
+
+#searchBox {
+    width: 300px;
+    padding: 0.75rem;
+    border: 2px solid #6a11cb;
+    border-radius: 25px 0 0 25px;
+    outline: none;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+#searchBox:focus {
+    border-color: #2575fc; /* Highlight the search box when focused */
+}
+
+#searchButton {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    background-color: #6a11cb;
+    color: white;
+    border-radius: 0 25px 25px 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#searchButton:hover {
+    background-color: #2575fc;
+}
+
+/* Main Content */
+main {
+    width: 100%;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 3fr));
+    gap: 20px;
+    cursor: pointer;
+    padding: 12px;
+  
+    max-height: 200px
+}
+
+.card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.card:hover img {
+    transform: scale(1.1); 
+}
+
+.card-content {
+    padding: 1.2rem;
+}
+
+.card-content h2 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.card-content p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 0.5rem;
+}
+
+.card-content a {
+    display: inline-block;
+    margin-top: 1rem;
+    color: #6a11cb;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.card-content a:hover {
+    color: #2575fc;
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .main_nav {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .main_nav a label {
+        font-size: 2rem; /* Reduce font size for smaller screens */
+    }
+
+    .link ul {
+        flex-direction: column;
+        gap: 10px;
+        padding: 1rem 0;
+    }
+
+    #searchForm {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #searchBox {
+        border-radius: 25px;
+        margin-bottom: 10px;
+        width: 100%;
+        max-width: 300px;
+    }
+
+    #searchButton {
+        border-radius: 25px;
+        width: 100%;
+        max-width: 300px;
+    }
+}

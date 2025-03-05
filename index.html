@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taaza Khabar</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+   
+        <nav>
+            <div class="main_nav" >
+                <a href="#home" id="home">
+                    <label for="">Taaza Khabar</label>
+                </a>
+                <div class="link">
+                    <ul>
+                        <li class="Politics nav-item" id="politics"><a href="">Politics</a></li>
+                        <li class="Sports nav-item" id="sports" ><a href="">Sports</a></li>
+                        <li class="Finance nav-item" id="finance" ><a href="">Finance</a></li>
+                        <li class="Fashion nav-item" id="fashion" ><a href="">Fashion</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+ 
+
+        <form id="searchForm">
+            <input type="text" id="searchBox" placeholder="Enter movie name..." required>
+            <button type="submit" id="searchButton">Search</button>
+        </form>
+
+        <div id="cards_container" class="cards-container">
+            <!-- News articles will be dynamically injected here -->
+        </div>
+    
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
